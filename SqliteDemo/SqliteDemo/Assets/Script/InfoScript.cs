@@ -10,8 +10,8 @@ public class InfoScript : MonoBehaviour {
 
     public Transform PersonTable;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         Instance = this;
         Init();
@@ -40,8 +40,6 @@ public class InfoScript : MonoBehaviour {
 
             index++;
         }
-
-    
     }
 
     private void Clear()
@@ -52,8 +50,4 @@ public class InfoScript : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

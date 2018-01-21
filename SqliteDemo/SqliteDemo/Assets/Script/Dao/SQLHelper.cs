@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Dapper;
 using Mono.Data.Sqlite;
 using UnityEngine;
 using System.Data;
-using Model;
-
+/*
+ * 設計模式：門面模式
+ * 原因：使用第三方插件，最好再多包一層
+ * 一．日後第三方插件做修改只需要改一個地方
+ * 二．日後可能不只連接SQLite，還可能連MSSQL．統一管理可幫助日後提取抽象
+ * 
+ * **/
 namespace Dao
 {
+    /// <summary>
+    /// 把Dapper多包一層，專門做Dapper操作
+    /// </summary>
     public class SQLHelper
     {
         //連接資訊
